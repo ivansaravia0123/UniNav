@@ -106,11 +106,17 @@ document.getElementById('destinationSelect').addEventListener('change', handleCo
 
 reloadInstructionsButton = document.getElementById("reloadLocationButton");
 getCurrentLocationButton = document.getElementById("getCurrentLocationButton");
+
 // Event listener for the "Calculate Instructions" button
-document.getElementById("calculateInstructionsButton").addEventListener("click", function () {
+document.getElementById('calculateInstructionsButton').addEventListener('click', function () {
     calculateInstructionsClickCount++;
     handleDestinationSelection();
+
+    const destinationSelect = document.getElementById('destinationSelect');
+    const selectedDestination = destinationSelect.value;
+
 });
+
 
 
 function reloadInstructions(e) {
@@ -154,12 +160,3 @@ document.getElementById("speakInstructionsButton").addEventListener("click", fun
     });
 });
 
-
-
-// ...
-    });
-});
-
-
-
-// ...
