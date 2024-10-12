@@ -68,7 +68,7 @@
         }
 
         #map {
-            height: 150%; /* Asegurar que el mapa ocupe todo el alto disponible */
+            height: 100vh%; /* Asegurar que el mapa ocupe todo el alto disponible */
             width: 100%;
         }
 
@@ -123,8 +123,10 @@
             left: 10px;
             z-index: 1100;
             border-radius: 50%;
+            padding: 5px 10px; /* Ajustar el padding para hacerlo más pequeño */
+            font-size: 12px; /* Tamaño de fuente más pequeño */
         }
-
+        
         @media (max-width: 768px) {
             #sidebar {
                 width: 75%; /* Ajustar el ancho del sidebar */
@@ -184,11 +186,6 @@
     <br />
     <center>
         <input type="checkbox" class="checkbox" id="checkbox">
-        <label for="checkbox" class="checkbox-label">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-            <span class="ball"></span>
-        </label>
     </center>
     </div>
     </div>
