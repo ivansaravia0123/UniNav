@@ -157,3 +157,9 @@ document.getElementById("speakInstructionsButton").addEventListener("click", fun
 
 
 // ...
+    });
+});
+
+
+
+// ...
