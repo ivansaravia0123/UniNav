@@ -98,3 +98,14 @@ function displayInstructions(origin, destination, isDarkTheme) {
         });
     }
 }
+
+// routing.js
+function calculateRoute(startLatLng, endLatLng) {
+    L.Routing.control({
+        waypoints: [
+            L.latLng(startLatLng.lat, startLatLng.lng),
+            L.latLng(endLatLng.lat, endLatLng.lng)
+        ],
+        routeWhileDragging: true
+    }).addTo(map);
+}
