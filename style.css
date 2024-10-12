@@ -1,0 +1,227 @@
+/* Reset some default styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Map container styles */
+#map {
+    height: 100%; /* Adjust for the height of the button and modal header */
+    z-index: 0;
+    position: sticky;
+}
+
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px; /* Adjust for the width of the sidebar */
+    background-color: #131a41;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 20px;
+    z-index: 2;
+}
+
+.sidebar.show {
+    right: 0;
+}
+
+.sidebar.hide {
+    right: -250px; /* Adjust for the width of the sidebar */
+}
+
+/* Sidebar links/buttons styles */
+.sidebar a {
+    padding: 10px 15px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    color: #007bff;
+}
+
+/* Toggle Sidebar button styles */
+#toggleSidebar {
+    z-index: 8;
+    position: absolute;
+    top: 0;
+    right: 0; /* Position the button on the top right corner */
+}
+
+/* Modal styles */
+#instructionsModal {
+    z-index: 3; /* Ensure it's above the sidebar */
+}
+
+/* Base layers container styles */
+.leaflet-control-layers-base {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Dark theme base layers container styles */
+.dark-theme .leaflet-control-layers-base {
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Base layer label styles */
+.leaflet-control-layers-base label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+/* Checked base layer label styles */
+.leaflet-control-layers-base label.checked {
+    font-weight: bold;
+}
+
+/* Hovered base layer label styles */
+.leaflet-control-layers-base label:hover {
+    background-color: #f5f5f5;
+    border-radius: 3px;
+}
+
+/* Hovered base layer label styles in dark theme */
+.dark-theme .leaflet-control-layers-base label:hover {
+    background-color: #000;
+    border-radius: 3px;
+}
+
+/* Layer Control button styles */
+.leaflet-control-layers-toggle {
+    background-color: #fff;
+}
+
+/* Dark theme Layer Control button styles */
+.dark-theme .leaflet-control-layers-toggle {
+    background-color: #000;
+}
+
+/* Zoom button styles */
+.leaflet-bar a.leaflet-control-zoom-in,
+.leaflet-bar a.leaflet-control-zoom-out {
+    background-color: #fff !important; /* Change this to your desired color */
+    color: black !important; /* Change the text color if needed */
+}
+
+/* Zoom button styles in dark theme */
+.dark-theme .leaflet-bar a.leaflet-control-zoom-in,
+.dark-theme .leaflet-bar a.leaflet-control-zoom-out {
+    background-color: black !important; /* Change this to your desired color */
+    color: white !important; /* Change the text color if needed */
+}
+
+/* Dark and Light Theme rules */
+.light-theme .leaflet-layer {
+    filter: none;
+}
+
+.dark-theme .leaflet-layer {
+    filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+/* Dark modal background */
+.dark-theme .modal-content {
+    background-color: #333 !important; /* Dark background color for the modal */
+    color: #fff !important; /* Light text color for the modal content */
+}
+
+/* Close button color */
+.modal-header .btn-close {
+    color: #fff !important; /* Light color for the close button */
+}
+
+/* Instructions table text color */
+.dark-theme #instructionsTable {
+    color: white;
+}
+
+.light-theme #instructionsTable {
+    color: black;
+}
+
+/* Toggle switch styles */
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: #111;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+a {
+	text-decoration: none;
+	color: #fff !important;
+	font-weight: 700;
+  position: relative;
+}
+
+a::before {
+  content: '';
+  background-color: hsla(1, 70%, 36%, .99);
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 8px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+a:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+
+/* Dark modal background */
+.dark-theme .container mt-4 {
+    background-color: #333 !important; /* Dark background color for the modal */
+    color: #fff !important; /* Light text color for the modal content */
+}
