@@ -108,7 +108,7 @@ reloadInstructionsButton = document.getElementById("reloadLocationButton");
 getCurrentLocationButton = document.getElementById("getCurrentLocationButton");
 
 // Event listener for the "Calculate Instructions" button
-document.getElementById('calculateInstructionsButton').addEventListener('click', function () {
+document.getElementById('calculateInstructionsButton').addEventListener('touchend', function () {
     calculateInstructionsClickCount++;
     handleDestinationSelection();
 
@@ -159,4 +159,17 @@ document.getElementById("speakInstructionsButton").addEventListener("click", fun
         speakButton.click();
     });
 });
+
+navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
+function successCallback(position) {
+    console.log(position.coords.latitude, position.coords.longitude);
+    // Aquí puedes utilizar la ubicación para calcular la ruta
+}
+
+function errorCallback(error) {
+    console.error("Error al obtener la geolocalización:", error);
+    alert("Por favor habilita la geolocalización para calcular la ruta.");
+}
+
 
