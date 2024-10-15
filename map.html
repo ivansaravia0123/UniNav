@@ -6,13 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa de la Universidad</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers/dist/leaflet.awesome-markers.css" />
     <script src="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers/dist/leaflet.awesome-markers.js"></script>
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
@@ -33,8 +29,8 @@
             backdrop-filter: blur(10px);
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            overflow: auto; /* Asegurar que el contenido no se corte */
-            transition: transform 0.3s ease; /* Añadir transición para el sidebar */
+            overflow: auto;
+            transition: transform 0.3s ease;
         }
 
         /* Mejorar estilo del menú desplegable */
@@ -53,7 +49,7 @@
         }
 
         #sidebar.hide {
-            transform: translateX(-100%); /* Mover el sidebar hacia la izquierda */
+            transform: translateX(-100%);
         }
 
         #sidebar h2 {
@@ -68,13 +64,13 @@
         }
 
         #map {
-            height: 100vh%; /* Asegurar que el mapa ocupe todo el alto disponible */
+            height: 100%; /* Asegurar que el mapa ocupe todo el alto disponible */
             width: 100%;
         }
 
         #logo {
             display: block;
-            margin: 45px auto; /* Ajustar el margen superior */
+            margin: 45px auto;
             width: 100px;
             height: auto;
         }
@@ -83,32 +79,14 @@
             background-color: #9f281c;
             color: white;
             border-radius: 10px;
-            padding: 10px 15px; /* Aumentar el tamaño del padding */
+            padding: 10px 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
-            width: auto; /* Cambiar a auto para que el botón sea más pequeño */
         }
 
         .btn-custom:hover {
             background-color: #d63333;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .modal-header {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .modal-footer {
-            background-color: #f1f1f1;
-        }
-
-        .form-control {
-            border-radius: 20px;
-        }
-
-        .form-label {
-            margin-bottom: 0;
         }
 
         footer {
@@ -123,36 +101,32 @@
             left: 10px;
             z-index: 1100;
             border-radius: 50%;
-            padding: 5px 10px; /* Ajustar el padding para hacerlo más pequeño */
-            font-size: 12px; /* Tamaño de fuente más pequeño */
+            padding: 5px 10px;
+            font-size: 12px;
         }
-        
+
         @media (max-width: 768px) {
             #sidebar {
-                width: 75%; /* Ajustar el ancho del sidebar */
+                width: 75%;
             }
 
             #toggleSidebar {
-                top: 10px; /* Ajustar la posición del botón en móvil */
+                top: 10px;
                 left: 10px;
             }
 
             #sidebar.hide {
-                transform: translateX(-100%); /* Mantener oculto el sidebar en móvil */
+                transform: translateX(-100%);
             }
         }
 
         @media (max-width: 576px) {
             #logo {
-                width: 80px; /* Ajustar el tamaño del logo en móvil */
+                width: 80px;
             }
 
             #sidebar h2 {
-                font-size: 20px; /* Ajustar el tamaño de fuente del título */
-            }
-
-            .form-control {
-                font-size: 14px; /* Ajustar el tamaño de la fuente del input */
+                font-size: 20px;
             }
         }
     </style>
@@ -162,8 +136,6 @@
 
     <!-- Sidebar -->
     <div id="sidebar" class="sidebar hide">
-
-        <!-- Logo debajo de las instrucciones -->
         <img id="logo" src="logo.png" alt="Logo">
 
         <button id="getCurrentLocationButton" class="btn btn-custom w-100 mb-3" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Obtener mi ubicación actual ...">
@@ -177,47 +149,19 @@
             </select>
         </div>
 
-        <button id="calculateInstructionsButton" style="background-color: #9f281c;color: white;" class="btn btn-custom" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Calcular la ruta hacia el destino"><i class="fa-solid fa-route"> </i> Calcular Ruta</button>
-        <br />
-        <br />
-    </div>
-    <br />
-    <br />
-    <center>
-        <input type="checkbox" class="checkbox" id="checkbox">
-    </center>
-    </div>
+        <button id="searchButton" style="background-color: #9f281c; color: white; display: block; margin: 0 auto; margin-bottom: 20px;" class="btn btn-custom" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Buscar el destino"><i class="fa-solid fa-search"></i> Buscar</button>
+
+        <br>
+        <button id="tourButton" class="btn btn-custom w-100 mb-3" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Iniciar Tour">
+            <i class="fa-solid fa-map"></i> Tour
+        </button>
     </div>
 
-    <!-- Instructions Modal -->
-    <div id="exampleModal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Instrucciones de Ruta</h5>
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Cerrar">Cerrar</button>
-                </div>
-                <div class="modal-body">
-                    <table id="instructionsTable" class="table table-bordered">
-                        <thead class="thead-light">
-                            <tr>
-                                <th>Pasos</th>
-                                <th>Instrucciones</th>
-                                <th>Distancia</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- Toggle Sidebar Button -->
+<button id="toggleSidebar" class="btn btn-custom" onclick="toggleSidebar()">
+    <i class="fa-solid fa-bars"></i>
+</button>
 
-    <!-- Toggle Sidebar Button -->
-    <button id="toggleSidebar" class="btn btn-custom" onclick="toggleSidebar()">
-        <i class="fa-solid fa-bars"></i>
-    </button>
 
     <!-- Map Content -->
     <div id="content">
@@ -247,6 +191,12 @@
             const sidebar = document.getElementById('sidebar');
             sidebar.classList.toggle('hide');
         }
+
+        // Function to handle Tour button click
+        document.getElementById('tourButton').addEventListener('click', function() {
+            // Aquí puedes agregar la lógica para mostrar los puntos 360°
+            alert("Tour en desarrollo. Se mostrarán dos puntos fijos en el mapa.");
+        });
     </script>
 
 </body>
