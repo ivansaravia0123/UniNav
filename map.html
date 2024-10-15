@@ -68,7 +68,7 @@
         }
 
         #map {
-            height: 100vh%; /* Asegurar que el mapa ocupe todo el alto disponible */
+            height: 100vh; /* Asegurar que el mapa ocupe todo el alto disponible */
             width: 100%;
         }
 
@@ -176,8 +176,12 @@
                 <option value="default" selected>Selecciona una opción:</option>
             </select>
         </div>
-
-        <button id="calculateInstructionsButton" style="background-color: #9f281c;color: white;" class="btn btn-custom" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Calcular la ruta hacia el destino"><i class="fa-solid fa-route"> </i> Calcular Ruta</button>
+        <div class="btn-group">
+            <button id="searchButton" class="btn btn-custom" data-bs-toggle="tooltip" data-bs-placement="top" title="Buscar el destino"><i class="fa-solid fa-search"></i> Buscar</button>
+            <button id="tourButton" class="btn btn-custom" data-bs-toggle="tooltip" data-bs-placement="top" title="Iniciar Tour"><i class="fa-solid fa-camera"></i> Tour</button>
+        </div>
+        <br />
+    </div>
         <br />
         <br />
     </div>
