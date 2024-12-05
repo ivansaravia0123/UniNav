@@ -35,7 +35,6 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             overflow: auto; /* Asegurar que el contenido no se corte */
             transition: transform 0.3s ease; /* Añadir transición para el sidebar */
-            transform: translateX(100%); /* Oculta la barra lateral al principio */
         }
 
         /* Mejorar estilo del menú desplegable */
@@ -54,7 +53,7 @@
         }
 
         #sidebar.hide {
-            transform: translateX(-150%); /* Mover el sidebar hacia la izquierda */
+            transform: translateX(-100%); /* Mover el sidebar hacia la izquierda */
         }
 
         #sidebar h2 {
@@ -75,7 +74,7 @@
 
         #logo {
             display: block;
-            margin: 45px auto; /* Ajustar el margen superior */
+            margin: 25px auto; /* Ajustar el margen superior */
             width: 200px;
             height: auto;
         }
@@ -143,9 +142,9 @@
             }
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 576px) {
             #logo {
-                width: 150px; /* Ajustar el tamaño del logo en móvil */
+                width: 80px; /* Ajustar el tamaño del logo en móvil */
             }
 
             #sidebar h2 {
