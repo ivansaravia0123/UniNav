@@ -125,3 +125,39 @@ const buildingsData = [
     }
 ];
 
+function searchBuilding() {
+    const searchQuery = document.getElementById('buildingSearch').value.toLowerCase();
+    const resultsContainer = document.getElementById('searchResults');
+    resultsContainer.innerHTML = ''; // Limpiar resultados anteriores
+
+    // Filtrar edificios que coincidan con la búsqueda
+    const filteredBuildings = buildingsData.filter(building => {
+        return building.name.toLowerCase().includes(searchQuery) ||
+            building.rooms.some(room => room.name.toLowerCase().includes(searchQuery));
+    });
+
+    if (filteredBuildings.length > 0) {
+        filteredBuildings.forEach(building => {
+            const buildingElement = document.createElement('div');
+            buildingElement.classList.add('result-building');
+            buildingElement.innerHTML = `<strong>${building.name}</strong><br>`;
+
+            // Filtrar aulas del edificio que coincidan con la búsqueda
+            const filteredRooms = building.rooms.filter(room => room.name.toLowerCase().includes(searchQuery));
+            
+            if (filteredRooms.length > 0) {
+                filteredRooms.forEach(room => {
+                    const roomElement = document.createElement('div');
+                    roomElement.innerHTML = `- Aula: ${room.name} (Coordenadas: ${room.coordinates})`;
+                    buildingElement.appendChild(roomElement);
+                });
+            } else {
+                buildingElement.innerHTML += 'No se encontraron aulas que coincidan.';
+            }
+
+            resultsContainer.appendChild(buildingElement);
+        });
+    } else {
+        resultsContainer.innerHTML = 'No se encontraron resultados.';
+    }
+}
