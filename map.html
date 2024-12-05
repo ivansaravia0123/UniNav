@@ -251,10 +251,11 @@
 
     <script>
         // Toggle sidebar function
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('hide');
-        }
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('hide'); // Oculta o muestra el sidebar
+    sidebar.classList.toggle('show'); // Asegura que la barra sea visible cuando esté activa
+}
     </script>
 
 </body>
