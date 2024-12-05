@@ -18,55 +18,53 @@ html, body {
     width: 250px;
     position: fixed;
     top: 0;
-    right: 0; /* Cambié el right a 0 */
+    right: -250px; /* Adjust for the width of the sidebar */
     background-color: #131a41;
     overflow-x: hidden;
-    transition: transform 0.3s ease;
+    transition: 0.3s;
     padding-top: 20px;
     z-index: 2;
-    box-sizing: border-box;
-    transform: translateX(100%); /* Oculta la barra lateral al principio */
+    box-sizing: border-box; /* Asegura que padding y border no afecten el tamaño */
 }
 
 .sidebar.show {
-    transform: translateX(0); /* Mueve la barra lateral a su posición visible */
+    right: 0;
 }
 
 .sidebar.hide {
-    transform: translateX(100%); /* Vuelve a mover la barra lateral fuera de la vista */
+    right: -250px; /* Adjust for the width of the sidebar */
 }
 
-/* Media query para dispositivos móviles */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 100%; /* Ocupa toda la pantalla en móviles */
-    }
-
-    #map {
-        height: calc(100% - 60px); /* Ajusta la altura del mapa cuando la barra lateral esté activa */
-    }
+/* Sidebar links/buttons styles */
+.sidebar a {
+    padding: 10px 15px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    transition: 0.2s;
 }
 
-/* Estilos para el botón de toggle */
 #toggleSidebar {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 10px; /* Posición en la parte superior */
+    right: 10px; /* Posición en la parte derecha */
     z-index: 1100;
-    border-radius: 50%;
-    padding: 10px;
-    font-size: 16px;
-    width: 60px;
-    height: 60px;
-    background-color: #9f281c;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 80%; /* Forma circular */
+    padding: 5px; /* Ajusta el tamaño del botón */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    width: 65px; /* Ancho del botón */
+    height: 65px; /* Alto del botón */
+    background-color: #9f281c; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Añadir transición al color de fondo */
 }
 
 #toggleSidebar:hover {
-    background-color: #d63333;
+    background-color: #d63333; /* Cambia el color de fondo al pasar el mouse */
 }
 
 
