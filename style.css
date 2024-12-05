@@ -24,6 +24,7 @@ html, body {
     transition: 0.3s;
     padding-top: 20px;
     z-index: 2;
+    box-sizing: border-box; /* Asegura que padding y border no afecten el tamaño */
 }
 
 .sidebar.show {
