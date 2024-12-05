@@ -125,39 +125,154 @@ const buildingsData = [
     }
 ];
 
+const buildingsData = [
+    {
+        name: "Edificio Gerardo Barrios",
+        rooms: [
+            { name: "Decanaturas | Instituto del graduado", coordinates: "13.4900917, -88.1935302" },
+            { name: "GB_N2_01", coordinates: "13.4900917, -88.1935302" },
+            { name: "GB_N2_02", coordinates: "13.4900917, -88.1935302" },
+            { name: "GB_N2_03", coordinates: "13.4900917, -88.1935302" },
+            { name: "GB_N2_S1", coordinates: "13.4900917, -88.1935302" },
+            { name: "GB_N2_S2", coordinates: "13.4900917, -88.1935302" },
+            { name: "GB_N3_01", coordinates: "13.4900917, -88.1935302" },
+            { name: "GB_N3_02", coordinates: "13.4900917, -88.1935302" },
+            { name: "GB_N3_03", coordinates: "13.4900917, -88.1935302" },
+            { name: "GB_N3_04", coordinates: "13.4900917, -88.1935302" }
+        ]
+    },
+    {
+        name: "Biblioteca Central",
+        rooms: [
+            { name: "Sala de estudio individual", coordinates: "13.4884685, -88.1918152" },
+            { name: "Sala de estudio grupal", coordinates: "13.4884685, -88.1918152" },
+        ]
+    },
+    {
+        name: "Cancha Universitaria Gerardo Barrios",
+        rooms: [
+            { name: "Cancha UGB", coordinates: "13.489155, -88.194562" },
+        ]
+    },
+    {
+        name: "Baños",
+        rooms: [
+            { name: "Baño 1", coordinates: "13.4884806, -88.1921623" },
+            { name: "Baño 2", coordinates: "13.4887349, -88.1925301" },
+            { name: "Baño 3", coordinates: "13.4884816, -88.1936915" },
+            { name: "Baño 4", coordinates: "13.4899990, -88.1933120" },
+        ]
+    },
+    {
+        name: "Laboratorios",
+        rooms: [
+            { name: "LAB_C1_DR", coordinates: "13.48850, -88.19343" },
+            { name: "LAB_C2_DR", coordinates: "13.48850, -88.19343" },
+            { name: "LAB_C3_DR", coordinates: "13.48850, -88.19343" },
+            { name: "LAB_C4_DR", coordinates: "13.48850, -88.19343" },
+            { name: "LAB_HR_DR", coordinates: "13.48850, -88.19343" }
+        ]
+    },
+    {
+        name: "Edificio Innova",
+        rooms: [
+            { name: "INV_N1_LS", coordinates: "13.4886243, -88.1936105" },
+            { name: "INV_N1_LH", coordinates: "13.4886243, -88.1936105" },
+            { name: "INV_N2_SSDC", coordinates: "13.4886243, -88.1936105" },
+            { name: "INV_N2_CDS", coordinates: "13.4886243, -88.1936105" },
+            { name: "INV_N2_LM", coordinates: "13.4886243, -88.1936105" },
+            { name: "INV_N3_CDN", coordinates: "13.4886243, -88.1936105" },
+            { name: "INV_N3_TDA", coordinates: "13.4886243, -88.1936105" },
+            { name: "INV_N3_LSP", coordinates: "13.4886243, -88.1936105" }
+        ]
+    },
+    {
+        name: "Edificio Juan Jose Cañas",
+        rooms: [
+            { name: "JC_N1_01", coordinates: "13.4886574, -88.1938024" },
+            { name: "JC_N1_L.C.C", coordinates: "13.4886574, -88.1938024" },
+            { name: "JC_N1_LA", coordinates: "13.4886574, -88.1938024" },
+            { name: "JC_N2_LI_1", coordinates: "13.4886574, -88.1938024" },
+            { name: "JC_N2_Magna_01", coordinates: "13.4886574, -88.1938024" },
+            { name: "JC_N2_02", coordinates: "13.4886574, -88.1938024" },
+            { name: "JC_N3_01", coordinates: "13.4886574, -88.1938024" },
+            { name: "JC_N3_02", coordinates: "13.4886574, -88.1938024" },
+            { name: "JC_N3_03", coordinates: "13.4886574, -88.1938024" },
+            { name: "JC_N3_04", coordinates: "13.4886574, -88.1938024" }
+        ]
+    },
+    {
+        name: "Edificio Dr. Hugo Lindo",
+        rooms: [
+            { name: "HL_N1_LI_2", coordinates: "13.4896262, -88.1930545" },
+            { name: "HL_N1_LE", coordinates: "13.4896262, -88.1930545" },
+            { name: "HL_N1_01", coordinates: "13.4896262, -88.1930545" },
+            { name: "HL_N1_02", coordinates: "13.4896262, -88.1930545" },
+            { name: "HL_N1_03", coordinates: "13.4896262, -88.1930545" },
+            { name: "HL_N1_04", coordinates: "13.4896262, -88.1930545" }
+        ]
+    },
+
+    {
+        name: "Edificio de Enfermería ",
+        rooms: [
+            { name: "MO_N1_01", coordinates: "13.4886995, -88.1940295" },
+            { name: "MO_N1_02", coordinates: "13.4886995, -88.1940295" },
+            { name: "MO_N1_03", coordinates: "13.4886995, -88.1940295" },
+            { name: "MO_N1_LPE", coordinates: "13.4886995, -88.1940295" },
+            { name: "MO_N1_LA", coordinates: "13.4886995, -88.1940295" },
+            { name: "MO_N1_LN", coordinates: "13.4886995, -88.1940295" },
+            { name: "MO_N1_LMI", coordinates: "13.4886995, -88.1940295" },
+            { name: "MO_N1_LCQ", coordinates: "13.4886995, -88.1940295" }
+        ]
+    },
+    {
+        name: "Edificios Independientes",
+        rooms: [
+            { name: "Admisiones Universidad Gerardo Barrios", coordinates: "13.4889261, -88.1932690" },
+            { name: "Auditorio Universidad Gerardo Barrios", coordinates: "13.4885195, -88.1928500" },
+            { name: "Bienestar Estudiantil Universidad Gerardo Barrios", coordinates: "13.4886101, -88.1933524" },
+            { name: "UGB Store", coordinates: "13.4885353, -88.1920181" },
+            { name: "Academica UGB", coordinates: "13.4886763, -88.1925805" },
+            { name: "Colecturia UGB", coordinates: "13.4887610, -88.1925467" }
+        ]
+    },
+    {
+        name: "Edificio Dr. David Joaquin Guzman",
+        rooms: [
+            { name: "JG_N1_01", coordinates: "13.4885942, -88.1921424" },
+            { name: "JG_N1_02", coordinates: "13.4885942, -88.1921424" },
+            { name: "JG_N1_03", coordinates: "13.4885942, -88.1921424" },
+            { name: "JG_N1_04", coordinates: "13.4885942, -88.1921424" },
+            { name: "JG_RV_N2_L_RV", coordinates: "13.4885942, -88.1921424" },
+            { name: "JG_N2_01", coordinates: "13.4885942, -88.1921424" },
+            { name: "JG_N2_02", coordinates: "13.4885942, -88.1921424" },
+            { name: "JG_N2_03", coordinates: "13.4885942, -88.1921424" }
+        ]
+    }
+];
+
+// Función para buscar un edificio o aula
 function searchBuilding() {
-    const searchQuery = document.getElementById('buildingSearch').value.toLowerCase();
-    const resultsContainer = document.getElementById('searchResults');
-    resultsContainer.innerHTML = ''; // Limpiar resultados anteriores
+    // Obtener el valor ingresado en el campo de búsqueda
+    const searchInput = document.getElementById('buildingSearch').value.toLowerCase();
+    
+    // Buscar el edificio en la lista de edificios
+    const result = buildings.find(building => building.name.toLowerCase() === searchInput);
 
-    // Filtrar edificios que coincidan con la búsqueda
-    const filteredBuildings = buildingsData.filter(building => {
-        return building.name.toLowerCase().includes(searchQuery) ||
-            building.rooms.some(room => room.name.toLowerCase().includes(searchQuery));
-    });
+    if (result) {
+        // Si se encuentra el edificio, centramos el mapa en las coordenadas
+        map.setView([result.lat, result.lng], 18);  // 18 es el nivel de zoom (puedes ajustarlo)
 
-    if (filteredBuildings.length > 0) {
-        filteredBuildings.forEach(building => {
-            const buildingElement = document.createElement('div');
-            buildingElement.classList.add('result-building');
-            buildingElement.innerHTML = `<strong>${building.name}</strong><br>`;
-
-            // Filtrar aulas del edificio que coincidan con la búsqueda
-            const filteredRooms = building.rooms.filter(room => room.name.toLowerCase().includes(searchQuery));
-            
-            if (filteredRooms.length > 0) {
-                filteredRooms.forEach(room => {
-                    const roomElement = document.createElement('div');
-                    roomElement.innerHTML = `- Aula: ${room.name} (Coordenadas: ${room.coordinates})`;
-                    buildingElement.appendChild(roomElement);
-                });
-            } else {
-                buildingElement.innerHTML += 'No se encontraron aulas que coincidan.';
-            }
-
-            resultsContainer.appendChild(buildingElement);
-        });
+        // Crear un marcador en el mapa en las coordenadas encontradas
+        L.marker([result.lat, result.lng]).addTo(map)
+            .bindPopup(`<b>${result.name}</b>`)  // El nombre del edificio aparecerá en el popup
+            .openPopup();
+        
+        // Mostrar un mensaje de éxito con SweetAlert
+        Swal.fire('Edificio encontrado', `Ubicación de ${result.name} marcada en el mapa`, 'success');
     } else {
-        resultsContainer.innerHTML = 'No se encontraron resultados.';
+        // Si no se encuentra el edificio, mostrar un mensaje de error
+        Swal.fire('Edificio no encontrado', 'No se pudo encontrar el edificio o aula buscado', 'error');
     }
 }
