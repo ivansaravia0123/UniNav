@@ -74,7 +74,7 @@
 
         #logo {
             display: block;
-            margin: 25px auto; /* Ajustar el margen superior */
+            margin: 45px auto; /* Ajustar el margen superior */
             width: 200px;
             height: auto;
         }
@@ -142,9 +142,9 @@
             }
         }
 
-        @media (max-width: 576px) {
+        @media (max-width: 600px) {
             #logo {
-                width: 80px; /* Ajustar el tamaño del logo en móvil */
+                width: 125px; /* Ajustar el tamaño del logo en móvil */
             }
 
             #sidebar h2 {
@@ -175,6 +175,14 @@
             <select id="destinationSelect" class="form-control">
                 <option value="default" selected>Selecciona una opción:</option>
             </select>
+            <br />
+        <div class="mb-3">
+    <label for="buildingSearch" class="form-label">Buscar Edificio o Aula:</label>
+    <input type="text" id="buildingSearch" class="form-control" placeholder="Escribe el nombre del edificio o aula">
+</div>
+<button id="searchButton" class="btn btn-custom w-100 mb-3" onclick="searchBuilding()">
+    <i class="fa-solid fa-search"></i> Buscar
+</button>
         </div> 
        <button id="calculateInstructionsButton" class="btn btn-custom w-100 mb-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Calcular la ruta hacia el destino">
     <i class="fa-solid fa-route"></i> Buscar
