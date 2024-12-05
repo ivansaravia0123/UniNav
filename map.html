@@ -35,6 +35,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             overflow: auto; /* Asegurar que el contenido no se corte */
             transition: transform 0.3s ease; /* Añadir transición para el sidebar */
+            transform: translateX(100%); /* Oculta la barra lateral al principio */
         }
 
         /* Mejorar estilo del menú desplegable */
@@ -142,9 +143,9 @@
             }
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 500px) {
             #logo {
-                width: 125px; /* Ajustar el tamaño del logo en móvil */
+                width: 150px; /* Ajustar el tamaño del logo en móvil */
             }
 
             #sidebar h2 {
@@ -180,11 +181,8 @@
     <label for="buildingSearch" class="form-label">Buscar Edificio o Aula:</label>
     <input type="text" id="buildingSearch" class="form-control" placeholder="Escribe el nombre del edificio o aula">
 </div>
-<button id="searchButton" class="btn btn-custom w-100 mb-3" onclick="searchBuilding()">
-    <i class="fa-solid fa-search"></i> Buscar
-</button>
-<div id="searchResults" class="mt-3"></div>
-       <button id="calculateInstructionsButton" class="btn btn-custom w-100 mb-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Calcular la ruta hacia el destino">
+
+<button id="calculateInstructionsButton" class="btn btn-custom w-100 mb-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Calcular la ruta hacia el destino">
     <i class="fa-solid fa-route"></i> Buscar
 </button>
         <br />
