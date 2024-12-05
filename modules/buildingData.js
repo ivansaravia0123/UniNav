@@ -22,6 +22,21 @@ const buildingsData = [
         ]
     },
     {
+        name: "Cancha Universitaria Gerardo Barrios",
+        rooms: [
+            { name: "Cancha UGB", coordinates: "13.489155, -88.194562" },
+        ]
+    },
+    {
+        name: "Baños",
+        rooms: [
+            { name: "Baño 1", coordinates: "13.4884806, -88.1921623" },
+            { name: "Baño 2", coordinates: "13.4887349, -88.1925301" },
+            { name: "Baño 3", coordinates: "13.4884816, -88.1936915" },
+            { name: "Baño 4", coordinates: "13.4899990, -88.1933120" },
+        ]
+    },
+    {
         name: "Laboratorios",
         rooms: [
             { name: "LAB_C1_DR", coordinates: "13.48850, -88.19343" },
@@ -109,3 +124,4 @@ const buildingsData = [
         ]
     }
 ];
+
