@@ -37,14 +37,6 @@ if (savedTheme === 'dark') {
 }
 
 
-navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
-    enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0
-});
-
-
-
 
 
 // ...
@@ -64,25 +56,29 @@ async function handleDestinationSelection() {
 
     toggleSidebar();
     destinationCoordinates = selectedOption.value.split(',').map(parseFloat);
-// Asegúrate de que destinationCoordinates está bien definida antes de proceder
-if (destinationCoordinates && currentLocation) {
-    // Proceder con la lógica de cálculo de la ruta
-} else {
-    Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Por favor selecciona un destino válido y habilita la geolocalización.',
+    if (currentLocation) {
+        destinationMarkers.clearLayers();
+        map.eachLayer(function (layer) {
+            if (layer instanceof L.Polyline) {
+                layer.remove();
+            }
+        });
 
-
-function updatePolylineColor() {
-    if (currentLocation && destinationCoordinates) {
-        displayInstructions(currentLocation, destinationCoordinates, bodyElement.classList.contains('dark-theme'));
+        // Display instructions when both currentLocation and destinationCoordinates are defined
+        updatePolylineColor();
+        showMarkerOnMap(destinationCoordinates);
     } else {
-        console.error("Las coordenadas de destino o la ubicación actual no están disponibles.");
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Por favor habilita la geolocalizacion!',
+        });
     }
 }
- });
-}
+
+
+
+
 
 
 
@@ -120,6 +116,7 @@ document.getElementById('calculateInstructionsButton').addEventListener('touchen
     const selectedDestination = destinationSelect.value;
 
 });
+
 
 
 function reloadInstructions(e) {
@@ -174,6 +171,4 @@ function errorCallback(error) {
     console.error("Error al obtener la geolocalización:", error);
     alert("Por favor habilita la geolocalización para calcular la ruta.");
 }
-
-
 
